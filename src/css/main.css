@@ -95,8 +95,19 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/* Sticky Menu Bar */
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
 
-
+/* Sticky Clear Fix */
+.sticky:before,
+.sticky:after {
+    content: '';
+    display: table;
+}
 
 
 
