@@ -99,7 +99,22 @@ textarea {
 .sticky {
     position: -webkit-sticky;
     position: sticky;
+}
+
+.menu {
     top: 0;
+    height: 10vh;
+    min-height: 4em;
+    background: #000;
+    text-align: center;
+}
+
+.menu > a, a:hover {
+    text-decoration: none;
+    font-weight: bold;
+    height: 3em;
+    line-height: 4em;
+    padding: 0 .75em 0 .75em;
 }
 
 /* Sticky Clear Fix */
@@ -111,9 +126,10 @@ textarea {
 
 /* Set up sections */
 
+.section-first { height: 90vh;}
+
 .section { height: 100vh;}
 
-.section—first { height: 90vh; }
 
 
 /* ==========================================================================
