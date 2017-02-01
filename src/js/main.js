@@ -16,3 +16,12 @@ $(function() {
     }
   });
 });
+
+$( window ).scroll(function() {
+    if ( $(".menu")[0].getBoundingClientRect().top > 0) {
+      console.log('floating');
+    }
+    else {
+      console.log('top');
+    }
+});
