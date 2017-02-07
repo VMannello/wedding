@@ -105,16 +105,18 @@ textarea {
     top: 0;
     height: 10vh;
     min-height: 4em;
-    background: #000;
     text-align: center;
+
 }
 
 .menu > a, a:hover {
     text-decoration: none;
     font-weight: bold;
+    color: #fff;
+    background-color: #666;
     height: 3em;
-    line-height: 4em;
-    padding: 0 .75em 0 .75em;
+    padding: .75em;
+    margin: 0 .75em;
 }
 
 /* Sticky Clear Fix */
@@ -124,13 +126,46 @@ textarea {
     display: table;
 }
 
+.container {
+    margin: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100vh;
+    scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(100%);
+    scroll-snap-destination: 50% 50%;
+}
+
 /* Set up sections */
+.page {
+    height: 100%;
+    scroll-snap-coordinate: 50% 50%;
+}
 
-.section-first { height: 90vh;}
+#page1 {
+/* Main Page */
+    background: url(../img/happy.jpg) no-repeat center center;
+    background-size: cover;
+    margin-bottom: -10vh;
+}
 
-.section { height: 100vh;}
+#page2 {
+/* Your Stay */
+    background: url(../img/portland.jpg) no-repeat center center;
+    background-size: cover;
+}
 
+#page3 {
+/* The Day */
+    background: url(../img/sil.jpg) no-repeat center center;
+    background-size: cover;
+}
 
+#page4 {
+/* Go Play */
+    background: url(../img/overlook.jpg) no-repeat center center;
+    background-size: cover;
+}
 
 /* ==========================================================================
    Helper classes
