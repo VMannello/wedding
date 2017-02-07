@@ -93,6 +93,9 @@ textarea {
 
 /* ==========================================================================
    Author's custom styles
+
+    Colors: 1e96aa / 96d6db / A94C87 / BE9FB6;
+
    ========================================================================== */
 
 /* Sticky Menu Bar */
@@ -102,21 +105,26 @@ textarea {
 }
 
 .menu {
-    top: 0;
-    height: 10vh;
-    min-height: 4em;
+    top: 5vh;
+    height: 15vh;
+    width: 100%;
     text-align: center;
-
 }
 
-.menu > a, a:hover {
-    text-decoration: none;
-    font-weight: bold;
+.menu > a {
+    display: inline-block;
+    transition: all .2s ease-in-out;
     color: #fff;
-    background-color: #666;
-    height: 3em;
-    padding: .75em;
-    margin: 0 .75em;
+    margin: 0 1em;
+}
+
+.menu > a:hover {
+    color: #555;
+    transform: scale(1.1);
+}
+
+.menu > a > svg {
+    height: 4em;    
 }
 
 /* Sticky Clear Fix */
@@ -126,46 +134,48 @@ textarea {
     display: table;
 }
 
-.container {
-    margin: auto;
-    overflow-y: auto;
-    overflow-x: hidden;
-    height: 100vh;
-    scroll-snap-type: mandatory;
-    scroll-snap-points-y: repeat(100%);
-    scroll-snap-destination: 50% 50%;
-}
-
 /* Set up sections */
 .page {
-    height: 100%;
-    scroll-snap-coordinate: 50% 50%;
+    height: 90vh;
+    padding: 5vh;
+    text-align: center;
+}
+
+.content {
+    height: 75vh;
+    width: auto;
+    max-width: 90%;
 }
 
 #page1 {
 /* Main Page */
-    background: url(../img/happy.jpg) no-repeat center center;
-    background-size: cover;
-    margin-bottom: -10vh;
+    background: #1e96aa; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #1e96aa 0%, #96d6db 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #1e96aa 0%,#96d6db 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #1e96aa 0%,#96d6db 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e96aa', endColorstr='#96d6db',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    margin-bottom: -15vh;
 }
 
 #page2 {
 /* Your Stay */
-    background: url(../img/portland.jpg) no-repeat center center;
-    background-size: cover;
+    background: #BE9FB6; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #BE9FB6 0%, #A94C87 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #BE9FB6 0%,#A94C87 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #BE9FB6 0%,#A94C87 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#BE9FB6', endColorstr='#A94C87',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 #page3 {
 /* The Day */
-    background: url(../img/sil.jpg) no-repeat center center;
-    background-size: cover;
+    background: #1e96aa; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #1e96aa 0%, #96d6db 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #1e96aa 0%,#96d6db 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #1e96aa 0%,#96d6db 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e96aa', endColorstr='#96d6db',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    
 }
 
-#page4 {
-/* Go Play */
-    background: url(../img/overlook.jpg) no-repeat center center;
-    background-size: cover;
-}
 
 /* ==========================================================================
    Helper classes
