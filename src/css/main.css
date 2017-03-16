@@ -10,8 +10,8 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
-html {
-    color: #222;
+html,body {
+    color: #fff;
     font-size: 1em;
     line-height: 1.4;
 }
@@ -102,29 +102,68 @@ textarea {
 .sticky {
     position: -webkit-sticky;
     position: sticky;
+    z-index: 100000;
+}
+
+.rsvp {
+    display:block;
+    height: 12vh;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mv, .june, .portland {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+}
+
+.mv {
+    height: 46%;
+}
+
+.portland {
+    height: 11%;
+}
+
+.june {
+    height: 29%;
+}
+
+.mainbg {
+    height: 80vh;
+    width: auto;
+    background-image: url('../img/mainbg-2400.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 20%;
+    display: block;
 }
 
 .menu {
-    top: 5vh;
-    height: 15vh;
+    top: .5em;
+    height: 10vh;
     width: 100%;
     text-align: center;
+    font-size: 3em;
+    font-family: 'Londrina Solid', cursive;
+    background-color: rgba(255,255,255,.7);
 }
 
 .menu > a {
     display: inline-block;
     transition: all .2s ease-in-out;
-    color: #fff;
-    margin: 0 1em;
+    padding:0 .75em;
+    color: #555;
+    margin: auto;
+    text-decoration: none;
 }
 
 .menu > a:hover {
-    color: #555;
+    color: #1E96AA;
     transform: scale(1.1);
-}
-
-.menu > a > svg {
-    height: 4em;    
 }
 
 /* Sticky Clear Fix */
@@ -136,44 +175,74 @@ textarea {
 
 /* Set up sections */
 .page {
-    height: 90vh;
-    padding: 5vh;
+    padding: 0;
     text-align: center;
+    background: #FFF;
 }
 
-.content {
-    height: 75vh;
-    width: auto;
-    max-width: 90%;
+.cols {
+    display:inline-block;
+    width:40vw;
+    padding:2vw;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.25em;
+    line-height: 1.75em;
+    text-align: center;
+    color: rgb(33,33,33);
+}
+
+.header {
+    width:80%;
+    height: auto;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 #page1 {
 /* Main Page */
-    background: #1e96aa; /* Old browsers */
-    background: -moz-linear-gradient(-45deg, #1e96aa 0%, #96d6db 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(-45deg, #1e96aa 0%,#96d6db 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(135deg, #1e96aa 0%,#96d6db 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e96aa', endColorstr='#96d6db',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-    margin-bottom: -15vh;
+    height:100vh;
+    margin-bottom: -10vh;
 }
 
 #page2 {
 /* Your Stay */
-    background: #BE9FB6; /* Old browsers */
-    background: -moz-linear-gradient(-45deg, #BE9FB6 0%, #A94C87 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(-45deg, #BE9FB6 0%,#A94C87 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(135deg, #BE9FB6 0%,#A94C87 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#BE9FB6', endColorstr='#A94C87',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    padding: 10vh 0 0;
 }
 
 #page3 {
 /* The Day */
-    background: #1e96aa; /* Old browsers */
-    background: -moz-linear-gradient(-45deg, #1e96aa 0%, #96d6db 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(-45deg, #1e96aa 0%,#96d6db 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(135deg, #1e96aa 0%,#96d6db 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e96aa', endColorstr='#96d6db',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-    
+    padding: 10vh 0 0;
+}
+
+
+#page4 {
+/* Your Stay */
+    padding: 10vh 0 0;
+}
+
+
+
+/*
+Mobile
+*/
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : portrait)
+{
+    .menu > a {
+        font-size: 4vh;
+    }
+
+    .cols {
+    display:inline-block;
+    width:96vw;
+    margin-right: auto;
+    margin-left: auto;
+    }
+
 }
 
 
