@@ -184,6 +184,7 @@ white-space: nowrap;
     padding: 0;
     text-align: center;
     background: #FFF;
+    padding: 10vh 2vw 0 2vw;
 }
 
 .cols {
@@ -209,6 +210,7 @@ white-space: nowrap;
 #page1 {
 /* Main Page */
     height:100vh;
+    padding: 0;
     margin-bottom: -10vh;
 }
 
@@ -228,6 +230,7 @@ white-space: nowrap;
         }
 
         .mv {
+            padding-top:4vh;
             height: 46%;
         }
 
@@ -250,8 +253,7 @@ white-space: nowrap;
         }
 
 #page2 {
-/* Your Stay */
-    padding: 10vh 2vw 0 2vw;
+/* The Day */
 }
 
 .listing{
@@ -270,14 +272,12 @@ white-space: nowrap;
 }
 
 #page3 {
-/* The Day */
-    padding: 10vh 0 0;
+/* Your Stay */
 }
 
 
 #page4 {
-/* Your Stay */
-    padding: 10vh 0 0;
+/* Go Play */
 }
 
 
@@ -292,9 +292,20 @@ and (max-device-width : 568px)
 and (orientation : portrait)
 {
     .menu > a {
-        font-size: 4vh;
+        font-size: 7vw;
     }
 
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    p{
+        font-size: 1rem;
+    }
     .cols {
     display:inline-block;
     width:96vw;
