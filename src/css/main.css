@@ -11,11 +11,21 @@
    ========================================================================== */
 
 html,body {
-    color: #fff;
+    color: #000;
     font-size: 1em;
     line-height: 1.4;
+    font-family: 'Nunito', sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all .2s ease-in-out;
+}
+
+a:hover {
+    color: #1E96AA;
+}
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -98,48 +108,43 @@ textarea {
 
    ========================================================================== */
 
+h2 {
+    display:block;
+    font-size: 5em;
+    line-height: 1em;
+    padding:0;
+    margin:3vh auto 0 auto;
+    color: #1e96aa;
+    font-family: 'Londrina Solid', cursive;
+}
+
+h3 {
+    display:block;
+    font-size: 3em;
+    line-height: 1em;
+    padding:0;
+    margin:0 auto 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    color: #1e96aa;
+    font-family: 'Londrina Solid', cursive;
+}
+
+p {
+    font-size: 1.7em;
+    font-family: 'Nunito', sans-serif;
+    font-weight:300;
+}
+
+b{
+white-space: nowrap;
+  font-weight:600;  
+}
 /* Sticky Menu Bar */
 .sticky {
     position: -webkit-sticky;
     position: sticky;
     z-index: 100000;
-}
-
-.rsvp {
-    display:block;
-    height: 12vh;
-    width: auto;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.mv, .june, .portland {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 90%;
-}
-
-.mv {
-    height: 46%;
-}
-
-.portland {
-    height: 11%;
-}
-
-.june {
-    height: 29%;
-}
-
-.mainbg {
-    height: 80vh;
-    width: auto;
-    background-image: url('../img/mainbg-2400.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 100% 20%;
-    display: block;
 }
 
 .menu {
@@ -173,6 +178,7 @@ textarea {
     display: table;
 }
 
+
 /* Set up sections */
 .page {
     padding: 0;
@@ -189,6 +195,7 @@ textarea {
     line-height: 1.75em;
     text-align: center;
     color: rgb(33,33,33);
+    vertical-align: top;
 }
 
 .header {
@@ -205,9 +212,61 @@ textarea {
     margin-bottom: -10vh;
 }
 
+        .rsvp {
+            display:block;
+            height: 12vh;
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .mv, .june, .portland {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 90%;
+        }
+
+        .mv {
+            height: 46%;
+        }
+
+        .portland {
+            height: 11%;
+        }
+
+        .june {
+            height: 29%;
+        }
+
+        .mainbg {
+            height: 80vh;
+            width: auto;
+            background-image: url('../img/mainbg-2400.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 100% 20%;
+            display: block;
+        }
+
 #page2 {
 /* Your Stay */
-    padding: 10vh 0 0;
+    padding: 10vh 2vw 0 2vw;
+}
+
+.listing{
+    display:inline-block;
+    margin: 1vh 3vw;
+    padding: 0;
+    min-width: 22vw;   
+}
+
+.listing > img {
+    width:23vw;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
 }
 
 #page3 {
