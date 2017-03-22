@@ -45,6 +45,17 @@
 
           <img class="rsvp" src="img/rsvp.png" />
 
+          <form id="rsvpContainer">
+            <input type="text" class="rsvpText required" name="name" placeholder="Your Name"></input>
+            <span id="attend">
+            <input type="radio" id="attending" value="yes" name="attending"><label for="attending">Attending</label><input value="no" type="radio" id="notAttending" name="attending"><label for="notAttending">Not Attending</label>
+            </span>
+            <span class="gCount gone">Guests: <span id="guestCount">0</span><button id="guestUp" type=button>+</button><button id="guestDown" type=button>–</button></span>
+            <input type="text" class="rsvpText gone" name="song" id="#song" placeholder="A Song You'd Dance To"></input>
+            <textarea class="rsvpText" name="comment" placeholder="Drop us a line!"></textarea>
+            <button class="rsvpButton" id="sendRSVP" type=button>Send</button><button class="rsvpButton" id="cancelRSVP" type=button>Cancel</button>
+          </form>
+
         </section>
         <div class="sticky menu">
           <a href="#page3">Your Stay</a><a href="#page2">The Day</a><a href="#page4">Go Play</a>
@@ -68,7 +79,7 @@
 
         <section class="page" id="page3">
         <h2>Lodging</h2>
-        <p>To safely enjoy the libations and see Portland's beautiful downtown we reccomend staying as close to <a href="#page3"><b>Urban Studio</b></a> as possible. To help your search we've picked some great places to stay.</p>
+        <p>To safely enjoy the libations and see Portland's beautiful downtown we recommend staying as close to <a href="#page2"><b>Urban Studio</b></a> as possible. To help your search we've picked some great places to stay.</p>
 
         <a href="https://www.acehotel.com/portland" target="_new" class="listing"><h3>Ace Hotel</h3><b>1022 SW STARK ST</b> <br />503.228.2277
         </a>
@@ -115,7 +126,7 @@
         <br /> <br />
 
         <h2>Weather</h2>
-        <p>The weather can be a little indecisive at times. The ceremony is outdoors so if there's rain in the forecast bring an umbrella. Don't foregt to check it one last time before you leave!</p>
+        <p>Portland weather can be a little indecisive at times. The ceremony is outdoors so if there's rain in the forecast bring an umbrella. Don't foregt to check it one last time before you leave!</p>
 
         <a href="http://forecast.weather.gov/MapClick.php?lat=45.52344714800046&lon=-122.67620703599971#.WMpPjhIrLGI" target="_new" class="listing"><h3>Weather.gov</h3><b>Portland, OR</b></a>
 

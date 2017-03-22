@@ -149,10 +149,11 @@ white-space: nowrap;
 
 .menu {
     top: .5em;
-    height: 10vh;
     width: 100%;
     text-align: center;
+    vertical-align: center;
     font-size: 3em;
+    line-height: 3.5rem;
     font-family: 'Londrina Solid', cursive;
     background-color: rgba(255,255,255,.7);
 }
@@ -162,7 +163,8 @@ white-space: nowrap;
     transition: all .2s ease-in-out;
     padding:0 .75em;
     color: #555;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     text-decoration: none;
 }
 
@@ -178,6 +180,87 @@ white-space: nowrap;
     display: table;
 }
 
+/* Input styling */
+
+#rsvpContainer {
+    display:none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+    min-width: 250px;
+    text-align: center;
+}
+
+input[type="radio"] {
+  display: none;
+  width: 40%;
+}
+
+input[type="radio"]:checked + label {
+  color: #1e96aa;
+  font-weight: bold;
+}
+
+input[type="radio"] + label {
+    display: inline-block;
+    color: rgb(33,33,33);
+    border: 1px solid #ddd;
+    background-color: #f0f0f0;
+    -o-transition: background-color .2s ease-in; 
+    -moz-transition: background-color .2s ease-in;
+    -webkit-transition: background-color .2s ease-in; 
+    transition: background-color .2s ease-in;
+    width: 40%;
+    margin: .125em;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.25em;
+    line-height: 1.75em;
+    text-align: center;
+    text-indent: 0px;
+    text-shadow: none;
+}
+
+.gCount {
+    display: block;
+    width: 100%;
+    font-family: 'Nunito', sans-serif;
+    margin: .125em;
+    font-size: 1.25em;
+    line-height: 1.75em;
+    text-align: center;
+    color: rgb(33,33,33);
+}
+
+.gCount > button {
+    font-family: 'Nunito', sans-serif;
+    margin: .125em;
+    font-size: 1.25em;
+    text-align: center;
+    color: rgb(33,33,33);
+}
+
+.rsvpText {
+    display: inline-block;
+    width: 100%;
+    font-family: 'Nunito', sans-serif;
+    margin: .125em;
+    font-size: 1.25em;
+    line-height: 1.75em;
+    text-align: center;
+    color: rgb(33,33,33);
+}
+
+.rsvpButton {
+    display: inline-block;
+    padding: 2px 6px 3px;
+    width: 40%;
+    margin:.125em;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.25em;
+    line-height: 1.75em;
+    text-align: center;
+    color: rgb(33,33,33);
+}
 
 /* Set up sections */
 .page {
@@ -220,6 +303,7 @@ white-space: nowrap;
             width: auto;
             margin-left: auto;
             margin-right: auto;
+            cursor: pointer;
         }
 
         .mv, .june, .portland {
@@ -231,19 +315,19 @@ white-space: nowrap;
 
         .mv {
             padding-top:4vh;
-            height: 46%;
+            height: 36.8vh;
         }
 
         .portland {
-            height: 11%;
+            height: 8.8vh;
         }
 
         .june {
-            height: 29%;
+            height: 23.2vh;
         }
 
         .mainbg {
-            height: 80vh;
+            height: 75vh;
             width: auto;
             background-image: url('../img/mainbg-2400.jpg');
             background-repeat: no-repeat;
@@ -263,13 +347,6 @@ white-space: nowrap;
     min-width: 22vw;   
 }
 
-.listing > img {
-    width:23vw;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    display:block;
-}
 
 #page3 {
 /* Your Stay */
