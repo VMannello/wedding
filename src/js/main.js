@@ -72,16 +72,41 @@ $(function() {
 
         $('#sendRSVP').click(function(){
           wrong = 0;
-          $("#rsvpContainer > .required").each(function(){  
-            if( !$(this).val().length > 0) {
-                wrong ++;
-                $(this).css('box-shadow','0 0 3px #CC0000');
-            }
-          });
-          
+          if(!$("input[name='attending']:checked").val()){
+            wrong ++;
+            $('input[type="radio"] + label').css('box-shadow','0 0 3px #CC0000');
+          }
+            $("#rsvpContainer > .required").each(function(){  
+              if( !$(this).val().length > 0) {
+                  wrong ++;
+                  $(this).css('box-shadow','0 0 3px #CC0000');
+              }
+            });
           if (wrong === 0) {
+            $('#rsvpContainer').html('<h2>RSVP Sent!!</h2>');
             payload = {data:$('#rsvpContainer').serialize()};
             console.log(payload);
+            $('.mainbg').animate({height:'75vh'}, 1000, 'swing', function() {
+              $('#rsvpContainer').hide();
+            });
+            $('.portland').animate({padding:'0 0 0 0'});
+            $('.mv').slideDown();
+            $('#page1').after($menu);
+            $('.menu').after($page2);
+            $('#page2').after($page3);
+            $('#page3').after($page4);
+            $('a[href*="#"]:not([href="#"])').click(function() {
+              if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                if (target.length) {
+                  $('html, body').animate({
+                    scrollTop: target.offset().top
+                  }, 400);
+                  return false;
+                }
+              }
+            });
           }
 
         });
