@@ -77,7 +77,7 @@ $(function() {
             $('input[type="radio"] + label').css('box-shadow','0 0 3px #CC0000');
           }
             $("#rsvpContainer > .required").each(function(){
-              if ( $(this).val().length !== 0 ) {
+              if ( $(this).val().length === 0 ) {
                   wrong ++;
                   $(this).css('box-shadow','0 0 3px #CC0000');
               }
